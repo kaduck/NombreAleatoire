@@ -68,20 +68,17 @@ namespace TP1_GenerationAleatoire
         public static int[] LoiPoisson(int size, double alpha)
         {
             int[] x = new int[size];
-            // utilisation de la loi exponentielle
-            double[] expo = LoiExponentielle(size, alpha);
 
             for (int i = 0; i < size; i++)
             {
-                double p = 1;
-                p = p * r.NextDouble();
-                while (p > Math.Exp(-alpha))
+                x[i] = -1;
+                double p = 0;
+                while (p < 1) 
                 {
-                    p = p * r.NextDouble();
+                    p = p + Fonction.LoiExponentielle(1, alpha)[0];
                     x[i]++;
                 }
             }
-
             return x;
         }
         public static double[] LoiWeibull(int size, double alpha, double beta)
@@ -91,7 +88,8 @@ namespace TP1_GenerationAleatoire
             for (int i = 0; i < size; i++)
             {
                 double value = r.NextDouble();
-                v[i] = -(Math.Pow(Math.Log(1 - value), (1.00 / beta))) / alpha;
+                //v[i] = -(Math.Pow(Math.Log(1 - value), (1.00 / beta))) / alpha;
+                v[i] = Math.Pow(-(Math.Log(1 - value) / (Math.Pow(alpha, beta))), (1.00 / beta));
             }
 
             return v;

@@ -16,3 +16,9 @@ C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\Module_Ge
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\Module_Generation\obj\Debug\Module_Generation.csprojResolveAssemblyReference.cache
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\Module_Generation\obj\Debug\Module_Generation.dll
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\Module_Generation\obj\Debug\Module_Generation.pdb
+E:\Projet\NombreAleatoire\Module_Generation\bin\Debug\Module_Generation.dll.config
+E:\Projet\NombreAleatoire\Module_Generation\bin\Debug\Module_Generation.dll
+E:\Projet\NombreAleatoire\Module_Generation\bin\Debug\Module_Generation.pdb
+E:\Projet\NombreAleatoire\Module_Generation\obj\Debug\Module_Generation.csprojResolveAssemblyReference.cache
+E:\Projet\NombreAleatoire\Module_Generation\obj\Debug\Module_Generation.dll
+E:\Projet\NombreAleatoire\Module_Generation\obj\Debug\Module_Generation.pdb

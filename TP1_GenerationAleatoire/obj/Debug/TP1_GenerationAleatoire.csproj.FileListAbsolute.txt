@@ -23,3 +23,14 @@ C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\TP1_Gener
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.Diagram.resources
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.Form1.resources
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.csproj.GenerateResource.Cache
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\TP1_GenerationAleatoire.exe.config
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.exe
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.pdb
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\TP1_GenerationAleatoire.exe
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\TP1_GenerationAleatoire.pdb
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.csprojResolveAssemblyReference.cache
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.Diagram.resources
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.csproj.GenerateResource.Cache
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.MainForm.resources
+E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\alglibnet2.dll

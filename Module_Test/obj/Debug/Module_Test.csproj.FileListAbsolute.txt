@@ -25,3 +25,12 @@ C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\Module_Te
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\Module_Test\obj\Debug\Module_Test.csprojResolveAssemblyReference.cache
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\Module_Test\obj\Debug\Module_Test.dll
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\Module_Test\obj\Debug\Module_Test.pdb
+E:\Projet\NombreAleatoire\Module_Test\obj\Debug\Module_Test.csprojResolveAssemblyReference.cache
+E:\Projet\NombreAleatoire\Module_Test\obj\Debug\Module_Test.dll
+E:\Projet\NombreAleatoire\Module_Test\bin\Debug\Module_Test.dll.config
+E:\Projet\NombreAleatoire\Module_Test\bin\Debug\Module_Test.dll
+E:\Projet\NombreAleatoire\Module_Test\bin\Debug\Module_Test.pdb
+E:\Projet\NombreAleatoire\Module_Test\bin\Debug\alglibnet2.dll
+E:\Projet\NombreAleatoire\Module_Test\bin\Debug\Module_Generation.dll
+E:\Projet\NombreAleatoire\Module_Test\bin\Debug\Module_Generation.pdb
+E:\Projet\NombreAleatoire\Module_Test\obj\Debug\Module_Test.pdb
