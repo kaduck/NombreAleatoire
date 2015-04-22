@@ -42,6 +42,16 @@ namespace TP1_GenerationAleatoire
 
             return v;
         }
+        public static double LoiRepartitionExponentielleSingle(double alpha)
+        {
+            double value = r.NextDouble();
+            return -(Math.Log(1 - value)) / alpha;
+        }
+        public static double LoiExponentielleSingle(double lambda, double ix)
+        {
+            double value = r.NextDouble();
+            return lambda * Math.Exp(-lambda * ix);
+        }
         public static double[] LoiNormale(int size)
         {
             double[] U = new double[size];
@@ -75,7 +85,7 @@ namespace TP1_GenerationAleatoire
                 double p = 0;
                 while (p < 1) 
                 {
-                    p = p + Fonction.LoiExponentielle(1, alpha)[0];
+                    p = p + Fonction.LoiRepartitionExponentielleSingle(alpha);
                     x[i]++;
                 }
             }
@@ -88,11 +98,21 @@ namespace TP1_GenerationAleatoire
             for (int i = 0; i < size; i++)
             {
                 double value = r.NextDouble();
-                //v[i] = -(Math.Pow(Math.Log(1 - value), (1.00 / beta))) / alpha;
+                v[i] = -(Math.Pow(Math.Log(1 - value), (1.00 / beta))) / alpha;
                 v[i] = Math.Pow(-(Math.Log(1 - value) / (Math.Pow(alpha, beta))), (1.00 / beta));
             }
 
             return v;
+        }
+        public static double[] ProcessusPoisson(int size, double alpha)
+        {
+            double[] tableauCount = new double[size];
+            for (int i = 0; i < size; i++)
+            {
+                double exp = LoiRepartitionExponentielleSingle(alpha);
+                tableauCount[i] = (i > 0) ? exp + tableauCount[i - 1] : exp;
+            }
+            return tableauCount;
         }
     }
 }

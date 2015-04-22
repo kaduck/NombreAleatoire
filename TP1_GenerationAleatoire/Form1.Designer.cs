@@ -45,17 +45,26 @@
             this.lbNbValeurs = new System.Windows.Forms.Label();
             this.btKhiPoisson = new System.Windows.Forms.Button();
             this.btKhiUniforme = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbTailleIntervallePoisson = new System.Windows.Forms.NumericUpDown();
+            this.dgvPoisson = new System.Windows.Forms.DataGridView();
             this.diagram1 = new TP1_GenerationAleatoire.Diagram();
+            this.Intervalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Simule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calcule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbHauteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDefinitionVerticale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNombreClasses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNbValeurs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTailleIntervallePoisson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPoisson)).BeginInit();
             this.SuspendLayout();
             // 
             // tbHauteur
             // 
             this.tbHauteur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbHauteur.Location = new System.Drawing.Point(815, 12);
+            this.tbHauteur.Location = new System.Drawing.Point(1059, 12);
             this.tbHauteur.Maximum = new decimal(new int[] {
             1569325055,
             23283064,
@@ -74,7 +83,7 @@
             // tbDefinitionVerticale
             // 
             this.tbDefinitionVerticale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDefinitionVerticale.Location = new System.Drawing.Point(815, 38);
+            this.tbDefinitionVerticale.Location = new System.Drawing.Point(1059, 38);
             this.tbDefinitionVerticale.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -93,7 +102,7 @@
             // tbNombreClasses
             // 
             this.tbNombreClasses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNombreClasses.Location = new System.Drawing.Point(815, 64);
+            this.tbNombreClasses.Location = new System.Drawing.Point(1059, 64);
             this.tbNombreClasses.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -113,7 +122,7 @@
             // 
             this.lbHauteur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbHauteur.AutoSize = true;
-            this.lbHauteur.Location = new System.Drawing.Point(750, 14);
+            this.lbHauteur.Location = new System.Drawing.Point(994, 14);
             this.lbHauteur.Name = "lbHauteur";
             this.lbHauteur.Size = new System.Drawing.Size(51, 13);
             this.lbHauteur.TabIndex = 4;
@@ -123,7 +132,7 @@
             // 
             this.lbNbClasses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNbClasses.AutoSize = true;
-            this.lbNbClasses.Location = new System.Drawing.Point(698, 66);
+            this.lbNbClasses.Location = new System.Drawing.Point(942, 66);
             this.lbNbClasses.Name = "lbNbClasses";
             this.lbNbClasses.Size = new System.Drawing.Size(103, 13);
             this.lbNbClasses.TabIndex = 5;
@@ -133,7 +142,7 @@
             // 
             this.lbEchelleVerticale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbEchelleVerticale.AutoSize = true;
-            this.lbEchelleVerticale.Location = new System.Drawing.Point(710, 40);
+            this.lbEchelleVerticale.Location = new System.Drawing.Point(954, 40);
             this.lbEchelleVerticale.Name = "lbEchelleVerticale";
             this.lbEchelleVerticale.Size = new System.Drawing.Size(91, 13);
             this.lbEchelleVerticale.TabIndex = 6;
@@ -149,17 +158,19 @@
             "Exponentielle",
             "Normale",
             "Poisson",
-            "Weibull"});
-            this.cbMethodes.Location = new System.Drawing.Point(744, 152);
+            "Weibull",
+            "Processus Poisson"});
+            this.cbMethodes.Location = new System.Drawing.Point(988, 152);
             this.cbMethodes.Name = "cbMethodes";
             this.cbMethodes.Size = new System.Drawing.Size(121, 21);
             this.cbMethodes.TabIndex = 7;
+            this.cbMethodes.SelectedIndexChanged += new System.EventHandler(this.cbMethodes_SelectedIndexChanged);
             // 
             // lbChoixMethodes
             // 
             this.lbChoixMethodes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbChoixMethodes.AutoSize = true;
-            this.lbChoixMethodes.Location = new System.Drawing.Point(629, 155);
+            this.lbChoixMethodes.Location = new System.Drawing.Point(873, 155);
             this.lbChoixMethodes.Name = "lbChoixMethodes";
             this.lbChoixMethodes.Size = new System.Drawing.Size(109, 13);
             this.lbChoixMethodes.TabIndex = 8;
@@ -168,7 +179,7 @@
             // btChoixMethode
             // 
             this.btChoixMethode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btChoixMethode.Location = new System.Drawing.Point(791, 244);
+            this.btChoixMethode.Location = new System.Drawing.Point(1035, 244);
             this.btChoixMethode.Name = "btChoixMethode";
             this.btChoixMethode.Size = new System.Drawing.Size(75, 23);
             this.btChoixMethode.TabIndex = 9;
@@ -179,7 +190,7 @@
             // tbBeta
             // 
             this.tbBeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbBeta.Location = new System.Drawing.Point(839, 182);
+            this.tbBeta.Location = new System.Drawing.Point(1083, 182);
             this.tbBeta.Name = "tbBeta";
             this.tbBeta.Size = new System.Drawing.Size(27, 20);
             this.tbBeta.TabIndex = 10;
@@ -187,7 +198,7 @@
             // tbAlpha
             // 
             this.tbAlpha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbAlpha.Location = new System.Drawing.Point(759, 182);
+            this.tbAlpha.Location = new System.Drawing.Point(1003, 182);
             this.tbAlpha.Name = "tbAlpha";
             this.tbAlpha.Size = new System.Drawing.Size(27, 20);
             this.tbAlpha.TabIndex = 11;
@@ -196,7 +207,7 @@
             // 
             this.lbAlpha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAlpha.AutoSize = true;
-            this.lbAlpha.Location = new System.Drawing.Point(713, 185);
+            this.lbAlpha.Location = new System.Drawing.Point(957, 185);
             this.lbAlpha.Name = "lbAlpha";
             this.lbAlpha.Size = new System.Drawing.Size(40, 13);
             this.lbAlpha.TabIndex = 12;
@@ -206,7 +217,7 @@
             // 
             this.lbBeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbBeta.AutoSize = true;
-            this.lbBeta.Location = new System.Drawing.Point(798, 185);
+            this.lbBeta.Location = new System.Drawing.Point(1042, 185);
             this.lbBeta.Name = "lbBeta";
             this.lbBeta.Size = new System.Drawing.Size(35, 13);
             this.lbBeta.TabIndex = 13;
@@ -215,7 +226,7 @@
             // tbNbValeurs
             // 
             this.tbNbValeurs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNbValeurs.Location = new System.Drawing.Point(815, 208);
+            this.tbNbValeurs.Location = new System.Drawing.Point(1059, 208);
             this.tbNbValeurs.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -234,7 +245,7 @@
             // 
             this.lbNbValeurs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNbValeurs.AutoSize = true;
-            this.lbNbValeurs.Location = new System.Drawing.Point(699, 210);
+            this.lbNbValeurs.Location = new System.Drawing.Point(943, 210);
             this.lbNbValeurs.Name = "lbNbValeurs";
             this.lbNbValeurs.Size = new System.Drawing.Size(102, 13);
             this.lbNbValeurs.TabIndex = 15;
@@ -243,7 +254,7 @@
             // btKhiPoisson
             // 
             this.btKhiPoisson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btKhiPoisson.Location = new System.Drawing.Point(779, 273);
+            this.btKhiPoisson.Location = new System.Drawing.Point(1023, 273);
             this.btKhiPoisson.Name = "btKhiPoisson";
             this.btKhiPoisson.Size = new System.Drawing.Size(86, 23);
             this.btKhiPoisson.TabIndex = 16;
@@ -254,13 +265,68 @@
             // btKhiUniforme
             // 
             this.btKhiUniforme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btKhiUniforme.Location = new System.Drawing.Point(779, 302);
+            this.btKhiUniforme.Location = new System.Drawing.Point(1023, 302);
             this.btKhiUniforme.Name = "btKhiUniforme";
             this.btKhiUniforme.Size = new System.Drawing.Size(86, 23);
             this.btKhiUniforme.TabIndex = 17;
             this.btKhiUniforme.Text = "Khi 2 Uniforme";
             this.btKhiUniforme.UseVisualStyleBackColor = true;
             this.btKhiUniforme.Click += new System.EventHandler(this.btKhiUniforme_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(1023, 331);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Khi 2 Expo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(962, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Taille intervalle :";
+            // 
+            // tbTailleIntervallePoisson
+            // 
+            this.tbTailleIntervallePoisson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTailleIntervallePoisson.Location = new System.Drawing.Point(1059, 93);
+            this.tbTailleIntervallePoisson.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.tbTailleIntervallePoisson.Name = "tbTailleIntervallePoisson";
+            this.tbTailleIntervallePoisson.Size = new System.Drawing.Size(59, 20);
+            this.tbTailleIntervallePoisson.TabIndex = 20;
+            this.tbTailleIntervallePoisson.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // dgvPoisson
+            // 
+            this.dgvPoisson.AllowUserToAddRows = false;
+            this.dgvPoisson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPoisson.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Intervalle,
+            this.Simule,
+            this.Calcule});
+            this.dgvPoisson.Location = new System.Drawing.Point(615, 20);
+            this.dgvPoisson.Name = "dgvPoisson";
+            this.dgvPoisson.ReadOnly = true;
+            this.dgvPoisson.RowHeadersVisible = false;
+            this.dgvPoisson.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvPoisson.Size = new System.Drawing.Size(255, 150);
+            this.dgvPoisson.TabIndex = 21;
             // 
             // diagram1
             // 
@@ -274,11 +340,36 @@
             this.diagram1.TabIndex = 0;
             this.diagram1.Load += new System.EventHandler(this.diagram1_Load);
             // 
+            // Intervalle
+            // 
+            this.Intervalle.HeaderText = "Intervalle";
+            this.Intervalle.Name = "Intervalle";
+            this.Intervalle.ReadOnly = true;
+            this.Intervalle.Width = 101;
+            // 
+            // Simule
+            // 
+            this.Simule.HeaderText = "Simulé";
+            this.Simule.Name = "Simule";
+            this.Simule.ReadOnly = true;
+            this.Simule.Width = 75;
+            // 
+            // Calcule
+            // 
+            this.Calcule.HeaderText = "Calculé";
+            this.Calcule.Name = "Calcule";
+            this.Calcule.ReadOnly = true;
+            this.Calcule.Width = 75;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 474);
+            this.ClientSize = new System.Drawing.Size(1152, 474);
+            this.Controls.Add(this.dgvPoisson);
+            this.Controls.Add(this.tbTailleIntervallePoisson);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btKhiUniforme);
             this.Controls.Add(this.btKhiPoisson);
             this.Controls.Add(this.lbNbValeurs);
@@ -303,6 +394,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbDefinitionVerticale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNombreClasses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNbValeurs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTailleIntervallePoisson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPoisson)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,5 +421,12 @@
         protected System.Windows.Forms.Label lbNbValeurs;
         private System.Windows.Forms.Button btKhiPoisson;
         private System.Windows.Forms.Button btKhiUniforme;
+        private System.Windows.Forms.Button button1;
+        protected System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown tbTailleIntervallePoisson;
+        private System.Windows.Forms.DataGridView dgvPoisson;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Intervalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Simule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calcule;
     }
 }

@@ -21,8 +21,9 @@ namespace TP1_GenerationAleatoire
         public int NombreClasse { get; set; }
 
         public int[] NombreValeurIntervalle;
+        public int[] NombreValeurIntervallePoisson;
         private double tailleIntervalle;
-
+        public bool IsProcessusPoisson;
 
         public Diagram()
         {
@@ -50,6 +51,14 @@ namespace TP1_GenerationAleatoire
                         Point taille = new Point(((this.Width - 40) / NombreClasse), (int)(((double)(this.Height - 40)) * NombreValeurIntervalle[i] / ((double)Hauteur)));
                         gr.FillRectangle(new SolidBrush(Color.OrangeRed), pos1.X, pos1.Y - 5, taille.X, taille.Y + 5);
                     }
+                    /*
+                    for (int i = 0; i < NombreClasse; i++)
+                    {
+                        Point pos1 = new Point(20 + ((this.Width - 40) / NombreClasse * i), this.Height - 20 - (int)(((double)(this.Height - 40)) * NombreValeurIntervallePoisson[i] / ((double)Hauteur)));
+                        Point taille = new Point(((this.Width - 40) / NombreClasse), (int)(((double)(this.Height - 40)) * NombreValeurIntervallePoisson[i] / ((double)Hauteur)));
+                        gr.FillRectangle(new SolidBrush(Color.DeepSkyBlue), pos1.X, pos1.Y - 5, taille.X, taille.Y + 5);
+                    }
+                    */
                 }
 
                 AdjustableArrowCap bigArrow = new AdjustableArrowCap(5, 5);
@@ -83,13 +92,28 @@ namespace TP1_GenerationAleatoire
             double valeurMin = 0d;
             tailleIntervalle = (valeurMax - valeurMin) / (double)NombreClasse;
             int[] nbValeurIntervalle = new int[NombreClasse];
-            for (int i = 0; i < NombreClasse; i++)
+            if (!IsProcessusPoisson)
             {
-                nbValeurIntervalle[i] = 0;
-                foreach (double d in tabD)
+                for (int i = 0; i < NombreClasse; i++)
                 {
-                    if (d <= tailleIntervalle * (i + 1) && d > tailleIntervalle * i)
-                        nbValeurIntervalle[i]++;
+                    nbValeurIntervalle[i] = 0;
+                    foreach (double d in tabD)
+                    {
+                        if (d <= tailleIntervalle * (i + 1) && d > tailleIntervalle * i)
+                            nbValeurIntervalle[i]++;
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < NombreClasse; i++)
+                {
+                    nbValeurIntervalle[i] = 0;
+                    foreach (double d in tabD)
+                    {
+                        if (d <= tailleIntervalle * (i + 1) && d > tailleIntervalle * i && nbValeurIntervalle[i] < 1)
+                            nbValeurIntervalle[i]++;
+                    }
                 }
             }
             NombreValeurIntervalle = nbValeurIntervalle;
