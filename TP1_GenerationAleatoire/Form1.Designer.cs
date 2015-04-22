@@ -49,10 +49,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbTailleIntervallePoisson = new System.Windows.Forms.NumericUpDown();
             this.dgvPoisson = new System.Windows.Forms.DataGridView();
-            this.diagram1 = new TP1_GenerationAleatoire.Diagram();
             this.Intervalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Simule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Calcule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diagram1 = new TP1_GenerationAleatoire.Diagram();
             ((System.ComponentModel.ISupportInitialize)(this.tbHauteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDefinitionVerticale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNombreClasses)).BeginInit();
@@ -325,20 +325,8 @@
             this.dgvPoisson.ReadOnly = true;
             this.dgvPoisson.RowHeadersVisible = false;
             this.dgvPoisson.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvPoisson.Size = new System.Drawing.Size(255, 150);
+            this.dgvPoisson.Size = new System.Drawing.Size(255, 425);
             this.dgvPoisson.TabIndex = 21;
-            // 
-            // diagram1
-            // 
-            this.diagram1.DefinitionVerticale = 10;
-            this.diagram1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.diagram1.Hauteur = 100;
-            this.diagram1.Location = new System.Drawing.Point(0, 0);
-            this.diagram1.Name = "diagram1";
-            this.diagram1.NombreClasse = 100;
-            this.diagram1.Size = new System.Drawing.Size(601, 474);
-            this.diagram1.TabIndex = 0;
-            this.diagram1.Load += new System.EventHandler(this.diagram1_Load);
             // 
             // Intervalle
             // 
@@ -360,6 +348,18 @@
             this.Calcule.Name = "Calcule";
             this.Calcule.ReadOnly = true;
             this.Calcule.Width = 75;
+            // 
+            // diagram1
+            // 
+            this.diagram1.DefinitionVerticale = 10;
+            this.diagram1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.diagram1.Hauteur = 100;
+            this.diagram1.Location = new System.Drawing.Point(0, 0);
+            this.diagram1.Name = "diagram1";
+            this.diagram1.NombreClasse = 100;
+            this.diagram1.Size = new System.Drawing.Size(601, 474);
+            this.diagram1.TabIndex = 0;
+            this.diagram1.Load += new System.EventHandler(this.diagram1_Load);
             // 
             // MainForm
             // 

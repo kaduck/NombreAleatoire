@@ -86,7 +86,7 @@ namespace TP1_GenerationAleatoire
                         diagram1.IsProcessusPoisson = false;
                         double max = tabDouble.Max();
                         double valueClasse = (double)tbNombreClasses.Value / max;
-                        int classeParIntervalle = (int)Math.Round(tbTailleIntervallePoisson.Value) / (int)Math.Round(valueClasse);
+                        int classeParIntervalle = (int)Math.Round((double)tbTailleIntervallePoisson.Value / valueClasse);
                         int nombreIntervalle = (int)Math.Round(max) / (int)Math.Round(tbTailleIntervallePoisson.Value);
                         int sommePoisson = 0;
                         dgvPoisson.Rows.Clear();
@@ -94,23 +94,30 @@ namespace TP1_GenerationAleatoire
                         {
                             int index = dgvPoisson.Rows.Add();
                             dgvPoisson.Rows[index].Cells["Intervalle"].Value = "[ " + (int)tbTailleIntervallePoisson.Value * (i) + " - " + (int)tbTailleIntervallePoisson.Value * (i + 1) + " [";
-                            dgvPoisson.Rows[index].Cells["Simule"].Value = tabDouble.Where(t => t > (int)tbTailleIntervallePoisson.Value * i && t < (int)tbTailleIntervallePoisson.Value * (i + 1)).Count();
-                            sommePoisson = 0;
-                            for (int j = (int)tbTailleIntervallePoisson.Value * i; j <= ((int)tbTailleIntervallePoisson.Value * (i + 1))-1 && j < tabInt.Length-1; j++)
-                            {
-                                sommePoisson += tabInt[j];
-                            }
-                            int sommmetotale =0 ;
-                            for (int j = 0; j < tabInt.Length - 1; j++)
-                            {
-                                sommmetotale += tabInt[j];
-                            }
-                            dgvPoisson.Rows[index].Cells["Calcule"].Value = sommePoisson;
+
+                            int nbOccurence = tabDouble.Where(t => t > (int)tbTailleIntervallePoisson.Value * i && t < (int)tbTailleIntervallePoisson.Value * (i + 1)).Count();
+                            int deltaT = (int)tbTailleIntervallePoisson.Value * (i + 1)  - (int)tbTailleIntervallePoisson.Value * (i);
+
+                            double calcule = Khi_Deux.GenererRepartitionPoisson(nbOccurence, (max / (int)tbTailleIntervallePoisson.Value));
+
+                            //sommePoisson = 0;
+                            //for (int j = (int)tbTailleIntervallePoisson.Value * i; j <= ((int)tbTailleIntervallePoisson.Value * (i + 1))-1 && j < tabInt.Length-1; j++)
+                            //{
+                            //    sommePoisson += tabInt[j];
+                            //}
+                            //int sommmetotale =0 ;
+                            //for (int j = 0; j < tabInt.Length - 1; j++)
+                            //{
+                            //    sommmetotale += tabInt[j];
+                            //}
+                            dgvPoisson.Rows[index].Cells["Simule"].Value = nbOccurence;
+                            dgvPoisson.Rows[index].Cells["Calcule"].Value = Math.Round(calcule * tabDouble.Length,3);
                             //dgvPoisson.Rows[index].Cells["Calcule"].Value = tabInt.Where(t => t > (int)tbTailleIntervallePoisson.Value * i && t < (int)tbTailleIntervallePoisson.Value * (i + 1)).Count();
 
                         }
                         btKhiPoisson.Visible = false;
                         btKhiUniforme.Visible = false;
+                        button1.Visible = false;
                         break;
                     default:
                         tabDouble = Fonction.LoiUniforme((int)tbNbValeurs.Value);

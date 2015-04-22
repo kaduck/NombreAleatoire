@@ -235,5 +235,9 @@ namespace TP1_GenerationAleatoire
             return ret;
 
         }
+        public static double GenererRepartitionPoisson(int nbOccurence, double lambda )
+        {
+            return (Math.Exp(-lambda) * Math.Pow(lambda, nbOccurence) / Fonction.Factoriel(nbOccurence));
+        }
     }
 }

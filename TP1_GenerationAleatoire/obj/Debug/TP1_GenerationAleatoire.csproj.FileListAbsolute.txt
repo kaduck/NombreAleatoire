@@ -34,3 +34,14 @@ E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleato
 E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.csproj.GenerateResource.Cache
 E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.MainForm.resources
 E:\Projet\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\alglibnet2.dll
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\TP1_GenerationAleatoire.exe.config
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.exe
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.pdb
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\TP1_GenerationAleatoire.exe
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\TP1_GenerationAleatoire.pdb
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\alglibnet2.dll
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.csprojResolveAssemblyReference.cache
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.Diagram.resources
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.MainForm.resources
+C:\Users\Vincent\Documents\Visual Studio 2013\Projects\NombreAleatoire\NombreAleatoire\TP1_GenerationAleatoire\obj\Debug\TP1_GenerationAleatoire.csproj.GenerateResource.Cache
